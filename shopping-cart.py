@@ -39,7 +39,7 @@ while True:
         remove = input('What item would you like to remove?: ')
         shop.remove_item(remove)
     elif decision2 == 'n':
-        print('You have decided not to remove any itme from your cart.\n')
+        print('You have decided not to remove any item from your cart.\n')
     else:
         print('Please enter y or n')
         
