@@ -1,0 +1,34 @@
+# in this program if the user input name matches the list of presaved names, access is granted to open private files and folders
+
+def permission_decorator(func):
+    def wrapper(*args, **kwargs):
+        
+        print(f'Calling {func.__name__}() function to check identity...')
+        import time
+        time.sleep(2)
+        return func(*args, **kwargs)
+    return wrapper
+
+@permission_decorator
+def permissions(n):
+
+    with open('D:\Python Code Practices\projects/list_of_names.txt', 'r') as names:
+        content = list(names.read().split(' '))
+        if n in content:
+            if True:
+                return True
+            
+        return False
+     
+name = input('Enter your First Name: ')
+if permissions(name):
+    print(f'\n{name}: ACCESS GRANTED')
+    import os
+    print('\nHere is a list of directories. Would you like to open any files?\n\n',os.listdir('D:\Python Code Practices'))
+    choice1 = input('\nYes or No: ')
+    if choice1 == 'Yes':
+        choice2 = input('Enter the path to the file: ') # D:\Python Code Practices\file-handling/read_file.txt
+        file1 = open(choice2, 'r')
+        print('\n',''.join(file1.readlines()))
+else:
+    print(f'\n{name}: ACCESS NOT GRANTED.')
