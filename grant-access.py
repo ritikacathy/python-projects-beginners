@@ -23,12 +23,17 @@ def permissions(n):
 name = input('Enter your First Name: ')
 if permissions(name):
     print(f'\n{name}: ACCESS GRANTED')
+
     import os
-    print('\nHere is a list of directories. Would you like to open any files?\n\n',os.listdir('D:\Python Code Practices'))
+    print(f'Hello {name}, Welcome!')
+    print('\nHere is a list of directories. WOULD YOU LIKE TO OPEN ANY FILES?\n%s.' % ', '.join(os.listdir('D:\Python Code Practices')))
+    
     choice1 = input('\nYes or No: ')
+
     if choice1 == 'Yes':
-        choice2 = input('Enter the path to the file: ') # D:\Python Code Practices\file-handling/read_file.txt
+        choice2 = input('Enter the path to the file: ') # D:\Python Code Practices\birthdays/leah.txt
         file1 = open(choice2, 'r')
-        print('\n',''.join(file1.readlines()))
+        print('\n'.join(file1.readlines()))
+
 else:
     print(f'\n{name}: ACCESS NOT GRANTED.')
