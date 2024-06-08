@@ -1,3 +1,5 @@
+# in this program, out of 3 rounds and 2 players, whoever wins twice or more, wins ultimately
+
 import random
 
 def throw():

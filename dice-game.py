@@ -1,3 +1,5 @@
+# in this program, which ever player reaches is the maximum score first, wins
+
 import random
 
 def roll():

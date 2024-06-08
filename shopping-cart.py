@@ -1,3 +1,5 @@
+# in this program, you can shop items of your choice and it serves your total bill 
+
 import random
 class Shopping:
     def __init__(self) -> None:
