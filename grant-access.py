@@ -35,6 +35,8 @@ if permissions(name):
         choice2 = input('Enter the path to the file: ') # D:\PROGRAMMING\Python\birthdays\leah.txt
         file1 = open(choice2, 'r')
         print('\n'.join(file1.readlines()))
+    else:
+        print('Goodbye.')
 
 else:
     print(f'\n{name}: ACCESS NOT GRANTED.')
