@@ -12,11 +12,11 @@ def permission_decorator(func):
 @permission_decorator
 def permissions(n):
 
-    with open('D:\Python Code Practices\projects/list_of_names.txt', 'r') as names:
+    with open('D:/PROGRAMMING/Python/projects/list_of_names.txt', 'r') as names:
         content = list(names.read().split(' '))
         if n in content:
-            if True:
-                return True
+            # if True:
+            return True
             
         return False
      
@@ -26,12 +26,12 @@ if permissions(name):
 
     import os
     print(f'Hello {name}, Welcome!')
-    print('\nHere is a list of directories. WOULD YOU LIKE TO OPEN ANY FILES?\n%s.' % ', '.join(os.listdir('D:\Python Code Practices')))
+    print('\nHere is a list of directories. WOULD YOU LIKE TO OPEN ANY FILES?\n%s.' % ', '.join(os.listdir('D:/PROGRAMMING/Python')))
     
     choice1 = input('\nYes or No: ')
 
     if choice1 == 'Yes':
-        choice2 = input('Enter the path to the file: ') # D:\Python Code Practices\birthdays/leah.txt
+        choice2 = input('Enter the path to the file: ') # D:\PROGRAMMING\Python\birthdays\leah.txt
         file1 = open(choice2, 'r')
         print('\n'.join(file1.readlines()))
 
