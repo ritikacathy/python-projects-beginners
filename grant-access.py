@@ -1,4 +1,5 @@
 # in this program if the user input name matches the list of presaved names, access is granted to open private files and folders
+# names are provided in list_of_names.txt file.
 
 def permission_decorator(func):
     def wrapper(*args, **kwargs):
